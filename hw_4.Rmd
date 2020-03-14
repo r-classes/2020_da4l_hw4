@@ -1,0 +1,92 @@
+---
+title: "hw_4"
+author: "Имя Отчество Фамилия"
+output: html_document
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r, message=FALSE}
+knitr::opts_chunk$set(eval = FALSE)
+library(tidyverse)
+library(ggfortify)
+```
+
+## task 4.1
+
+В вашей папке лежит датасет `hw4_shakespeare.csv`, в котором содержатся чатстоты употребления слов в разных больших (больше 5000) текстах У. Шекспира (я выбрал только те слова, которые встречаются во всех произведениях). Постройте график PCA с нормализованными переменными.
+
+```{r}
+
+```
+
+### task 4.1.1
+Выведите в консоль значение комулитивной дисперсии, объясненной двумя первыми компонентами.
+
+```{r}
+
+```
+
+### task 4.1.2
+```{r}
+
+```
+
+На графике должны появится два явных кластера переменных. Напишите ниже, почему по вашему мнению они получились?
+
+Ваш ответ: ...
+
+### task 4.1.3
+Есть ли какая-то логика в росположении переменных многочисленного кластера переменных? Напишите ниже, если вы видите закономерность и перечислите противоречивые переменные. Так как все накладывается имеет смысл зумиться при помощи команды `scale_y_continuous(limits = c(0, 0.3))`, в которой нужно указать нужный промежуток.
+
+Ваш ответ: ...
+
+## task 4.2
+В вашей папке лежит датасет датасет `hw4_chairs.csv`, в котором собраны разные описания экземпляров из немецких он-лайн каталогов, отнесенным к категориям *Stuhl* 'стул' и *Sessel* 'кресло'. В датасете 19 переменных:
+
+* `Shop` a factor that describes the online store with levels ikea.de, Moebel-Profi.de and roller.de.
+* `WordDE` a factor that describes the specific lexical category.
+* `Category` a factor that describes the more general lexical category (usually the last element of a composite noun), with levels Sessel and Stuhl.
+* `Function` a factor with levels Eat, NotSpec, Outdoor, Relax and Work.
+* `Age` a factor with levels Adult and Children.
+* `Back` a factor with levels Adjust, High, Low and Mid.
+* `Soft` a factor with levels No, Pad and Yes.
+* `Arms` a factor with levels No and Yes.
+* `Upholst` a factor with levels No and Yes.
+* `MaterialSeat` a factor with levels Fabric, Leather, Loom_natur, Metal, Paper, Plastic, Polyamide, Rattan, Steel and Wood.
+* `SeatHeight` a factor with levels Adjust, High and Norm.
+* `SeatDepth` a factor with levels Adjust, Deep and Norm.
+* `Swivel` a factor with levels No and Yes
+* `Roll` a factor with levels No and Yes.
+* `Rock` a factor with levels No and Rock.
+* `AddFunctions` a factor with levels Bed, No and Table.
+* `Recline` a factor with levels No and Yes.
+* `ReclineBack` a factor with levels No and Yes.
+* `SaveSpace` a factor with levels collapse, No and stack.
+
+### task 4.2.1
+Используйте все переменные кроме переменных `Shop`, `WordDE` и `Category`, чтобы построить MCA. Нарисуйте все наблюдения, раскрасьте их по переменной `Category` и добавьте доверительные эллипсы. Сверху нанесите переменные из получившейся модели MCA.
+
+```{r}
+
+```
+
+### task 4.2.2
+Проанализируйте полученные результаты. Что Вы можете сказать на основе полученных результатов про категории `Stuhl` и `Sessel` в немецком? Что Вы можете сказать про переменные?
+
+Ваш ответ: ...
+
+## task 4.3
+В датасете `hw4_colreg.csv` содержится 11 базовых цветов в разных подкорпусах  Corpus of Contemporary American English (Davies 2008 - ). Учитывались только адъективные употребления. 
+
+### task 4.3.1
+Постройте CA и нарисуйте биплот с переменными из столбцов и строчек (без стрелочек).
+
+```{r}
+
+```
+
+### task 4.3.2
+Проинтерпретируйте полученные результаты.
+
+Ваш ответ: ...
